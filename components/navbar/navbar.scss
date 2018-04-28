@@ -1,0 +1,103 @@
+@import "../../common/elevations";
+
+div.a-navbar{    
+    position: absolute;
+    z-index: 100;
+    width:100vw;
+    left:0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;            
+    align-content: flex-end;
+    text-align:right;    
+    background-color: transparent;    
+    vertical-align: middle;
+    align-content: right;
+     
+    div.a-actions{
+        float:right;
+        width:100%;   
+        -moz-transition: transform 0.35s ease;
+        transition: transform 0.35s ease;         
+        transform: translateX(0%);    
+        input,span{
+            box-sizing: border-box;
+            margin: 5px;        
+            height:0.325in;            
+        }
+    }
+    .a-close-navbar{
+        display:none;
+    }
+    span.a-open-navbar{
+        display:none;
+        cursor: pointer;
+        color: $primary;
+        border: 1px solid $primary;
+        padding: 7px;
+        position:fixed;
+        top: 5px;
+        right:5px;
+        i{
+            vertical-align: middle;
+        }
+    }
+
+    div.a-curtain{
+        display:none;
+        position:fixed;
+        top:0;
+        left:0;
+        width: 100vw;
+        height:100vh;
+        background-color:$curtain;
+        z-index: 90;
+    }
+
+
+    @media only screen and (max-width: $small) {
+        position:fixed;
+        height:100vh;
+        left:auto;
+        width:auto;
+        span.a-open-navbar{
+            display:inline;
+        }
+        div.a-shown ~ div.a-curtain{
+            display:inline;
+        }
+        .a-close-navbar{
+            display:inline;
+        }
+        div.a-actions{
+            
+            @include mat-elevation(5);
+            background-color: $background;
+            width: auto;
+            position:fixed;
+            right:0;
+            z-index:99;
+            padding:4px;
+            height:100vh;
+            transform: translateX(110%);
+
+            &.a-shown{                
+                transform: translateX(0%);
+            }
+            *{ 
+                display:block;
+                margin:4px 0;
+                width:100%;
+            }
+        }
+
+    }
+    
+}

@@ -1,0 +1,29 @@
+@import "../../common/palette";
+@import "../../common/elevations";
+
+div.a-sidenav{
+    .a-sidenav-item {
+        
+        transform: translate(0, 0%);
+        @include mat-elevation(5);
+        color: $background;
+        background-color: $primary;
+
+        &:hover {
+            background-color: lighten-color($primary,0.30);            
+        }
+
+        &.a-selected{
+            background-color: $secondary;            
+        }
+        @media only screen and (max-width: $small) {
+            span {
+                display:none;
+            }
+            i{
+                padding: 5px;
+            }
+        }
+    
+    }
+}

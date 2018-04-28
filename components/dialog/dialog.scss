@@ -1,0 +1,60 @@
+
+@import "../../common/elevations.scss";
+
+#a-dialog-outer{    
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    z-index: 9999999;
+    background-color:$curtain;
+    font-size: 0.16in;        
+}
+
+
+#a-dialog-inter{   
+    @include mat-elevation(24);     
+    position:fixed;
+    background-color: white;
+    color:black;
+    top: 0.25in;
+    left: 0.5in;
+    bottom: 0.25in;
+    right: 0.5in;
+    padding: 0.25in;
+}
+
+#a-dialog-title {
+    top:0;
+    * {
+        display: inline;
+    }
+    h2{            
+        font-size:1.25rem;
+        font-weight:500;
+        flex:1;                        
+        line-height: 2rem;
+        text-align: left;
+    }
+    i{
+        position:absolute;
+        right:15px;
+        top: 15px;
+        cursor:pointer;            
+    }
+}
+
+@media only screen and (max-width: $small) {
+    #a-dialog-inter{   
+        @include mat-elevation(24);     
+        position:fixed;
+        background-color: white;
+        color:black;
+        top: 0.15in;
+        left: 0.15in;
+        bottom: 0.15in;
+        right: 0.15in;
+        padding: 0.25in;
+    }
+}
