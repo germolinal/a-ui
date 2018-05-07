@@ -67,6 +67,9 @@ div.a-navbar{
         height:100vh;
         left:auto;
         width:auto;
+        a {
+            text-decoration: none;
+        }
         span.a-open-navbar{
             display:inline;
         }
