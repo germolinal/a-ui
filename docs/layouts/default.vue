@@ -1,7 +1,7 @@
 <template>
   <div>
     <a-navbar>
-      <nuxt-link to='/'>
+      <nuxt-link to='/clean-ui/dist'>
         <a-button  :variant="'primary'">Home</a-button>
       </nuxt-link>
 
@@ -9,7 +9,7 @@
         <a-button  :variant="'primary'">Buttons</a-button>
       </nuxt-link>
 
-      <nuxt-link to='/colorpick'>
+      <nuxt-link to='/clean-ui/dist/colorpick'>
         <a-button :variant="'primary'">Color pick</a-button>
       </nuxt-link>
       

@@ -1,6 +1,6 @@
 module.exports = {
   router: {
-    base: '/clean-ui/dist'
+    //base: '/clean-ui/dist'
   },
   plugins : [
     '../clean-ui.nuxt'
