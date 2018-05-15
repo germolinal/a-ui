@@ -1,36 +1,36 @@
 <template>
   <div>
     <a-navbar>
-      <nuxt-link to='/clean-ui/dist'>
+      <nuxt-link :to='base'>
         <a-button  :variant="'primary'">Home</a-button>
       </nuxt-link>
 
-      <nuxt-link to='/buttons'>
+      <nuxt-link :to="base+'/buttons'">
         <a-button  :variant="'primary'">Buttons</a-button>
       </nuxt-link>
 
-      <nuxt-link to='/clean-ui/dist/colorpick'>
+      <nuxt-link :to="base+'/colorpick'">
         <a-button :variant="'primary'">Color pick</a-button>
       </nuxt-link>
       
-      <nuxt-link to='/dialog'>
+      <nuxt-link :to="base+'/dialog'">
         <a-button :variant="'primary'">Dialog</a-button>
       </nuxt-link>
       
-      <nuxt-link to='/inputs'>
+      <nuxt-link :to="base+'/inputs'">
         <a-button :variant="'primary'">Inputs</a-button>
       </nuxt-link>
 
-      <nuxt-link to='/links'>
+      <nuxt-link :to="base+'/links'">
         <a-button :variant="'primary'">Links</a-button>
       </nuxt-link>
       
 
-      <nuxt-link to='/directives' >
+      <nuxt-link :to="base+'/directives'">
         <a-button :variant="'primary'">Directives</a-button>
       </nuxt-link>
 
-      <nuxt-link to='/theming' >
+      <nuxt-link :to="base+'/theming'">
         <a-button :variant="'primary'">Theming</a-button>
       </nuxt-link>
       
@@ -40,6 +40,17 @@
 
   </div>
 </template>
+
+<script>
+export default {
+  data(){
+    return{
+      base: "/clean-ui/dist"
+    }
+  }
+}
+</script>
+
 
 <style lang='scss'>
 
