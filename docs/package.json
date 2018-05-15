@@ -1,7 +1,7 @@
 {
   "name": "docs",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
+  "description": "clean-ui documentation",
   "author": "German Molina <germolinal@gmail.com>",
   "private": true,
   "scripts": {

@@ -1,7 +1,7 @@
 
 @import "../../common/elevations.scss";
 
-#a-dialog-outer{    
+.a-dialog-outer{    
     position:fixed;
     top:0;
     left:0;
@@ -9,11 +9,20 @@
     height:100vh;
     z-index: 9999999;
     background-color:$curtain;
-    font-size: 0.16in;        
+    font-size: 0.16in;            
 }
 
 
-#a-dialog-inter{   
+.a-dialog-footer{    
+    text-align: right;     
+    //margin-top:0.1in;
+    position:absolute;
+    bottom:0.2in;
+    right: 0.2in;  
+}
+
+
+.a-dialog-inter{   
     @include mat-elevation(24);     
     position:fixed;
     background-color: white;
@@ -23,30 +32,35 @@
     bottom: 0.25in;
     right: 0.5in;
     padding: 0.25in;
-}
-
-#a-dialog-title {
-    top:0;
-    * {
-        display: inline;
+    z-index: 9999999;
+    .a-dialog-body{
+        margin-top: 0.1in;
     }
-    h2{            
-        font-size:1.25rem;
-        font-weight:500;
-        flex:1;                        
-        line-height: 2rem;
-        text-align: left;
-    }
-    i{
-        position:absolute;
-        right:15px;
-        top: 15px;
-        cursor:pointer;            
+    
+    .a-dialog-title {
+        top:0;
+        min-height: 0.2in;
+        * {
+            display: inline;
+        }
+        h2{            
+            font-size:1.25rem;            
+            flex:1;                        
+            line-height: 2rem;
+            text-align: left;
+            font-weight: bold;
+        }
+        i{
+            position:absolute;
+            right:15px;
+            top: 15px;
+            cursor:pointer;            
+        }
     }
 }
 
 @media only screen and (max-width: $small) {
-    #a-dialog-inter{   
+    .a-dialog-inter{   
         @include mat-elevation(24);     
         position:fixed;
         background-color: white;

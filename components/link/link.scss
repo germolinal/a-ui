@@ -1,0 +1,15 @@
+
+span.a-link{
+    cursor: pointer;
+    border:1px solid transparent;         
+    font-size:inherit; 
+    //border-bottom: 1px solid $primary;      
+    font-weight: bold;
+    color: $primary;
+    padding:2px;    
+
+    &:hover{
+        color: $secondary;
+        border:1px solid $secondary;
+    }
+}

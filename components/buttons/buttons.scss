@@ -80,9 +80,10 @@ button {
             @include flat-button-feedback($warn);                        
         }
 
-        &.basic, &.link{
+        &.basic{
             @include flat-button-feedback(black);                        
         }
+        
 
         &.disabled{
             color: #bbbbbb;
@@ -120,10 +121,6 @@ button {
             @include raised-button-feedback(black);                        
             color: black;
             background-color:white;
-        }
-
-        &.link{
-            @include raised-button-feedback(black);                        
         }
 
         &.disabled{

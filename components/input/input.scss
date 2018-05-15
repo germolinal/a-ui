@@ -1,44 +1,58 @@
 div.a-input{
     position: relative;
     margin-bottom: 15px;
+    input{
+        border: none;                
+        border-bottom:1px solid $primary;
+                
+        font-size:inherit;
+        display:block;
+        border-color:$primary;
+        box-shadow:none;
+        margin-top:25px;
+
+        &:focus{ 
+            outline:none;
+            border-width:2px;
+            border-color: $primary;                     
+        }
+    }
+
     
     label{
-        color:$readonly; 
-        font-size:inherit; //18px;
+        height:100%;
+        color:lighten($color,40); 
+        font-size:90%; 
         font-weight:normal;
         position:absolute;
         pointer-events:none;
         left:5px;
-        top:3px;
+        bottom:0px;
         transition:0.2s ease all; 
         -moz-transition:0.2s ease all; 
         -webkit-transition:0.2s ease all;
     }
     
     /* active state */
-    input:focus ~ label, input:valid ~ label		{
-        top:-20px;
-        font-size:14px;
+    input:focus ~ label, &.non-pristine input ~ label {
+        bottom:100%;
+        font-size:70%;
         color:$primary;
+        height:auto;
     }
-  
 
-    input{
-        display:block;
-        border: none;        
-        border-bottom:1px solid #919191;
-        box-shadow:none;
-        margin-top:25px;
-
-        &:focus, &:valid{ 
-            outline:none;
-            border-bottom:2px solid $primary;         
+    &.invalid{    
+        label, input:focus ~ label,&.non-pristine input ~ label {
+            color: $warn;
+            &:before{
+                content: " * "
+            }
+        }    
+        input{
+            //border-right: 1px solid;
+            border-color:$warn;
+            border-right: solid $warn;
+            border-width: 2px;
         }
-
-        &:invalid{
-            border:none;
-            border-bottom:2px solid $warn; 
-        }
-        
-    }
+    }  
 }

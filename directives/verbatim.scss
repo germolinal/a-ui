@@ -1,0 +1,13 @@
+textarea.a-verbatim{
+    width: 100%;
+    //height:auto;
+    min-height: 10em;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    border:1px solid gray;
+    outline:none;
+    resize:none;
+    color:inherit;
+    background-color: transparent;
+    font-family: monospace
+}

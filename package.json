@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/germolinal/a-ui/issues"
   },
-  "homepage": "https://github.com/germolinal/a-ui#readme"
+  "homepage": "https://github.com/germolinal/a-ui#readme",
+  "dependencies": {
+    "material-design-icons": "^3.0.1",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "vue-style-loader": "^4.1.0"
+  }
 }

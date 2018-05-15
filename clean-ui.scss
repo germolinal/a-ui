@@ -16,6 +16,7 @@ $warn: #f44336 !default;
 
 $background: white !default;
 $curtain: rgba(0,0,0,0.4) !default;
+$color:rgba(0,0,0,0.87) !default; 
 
 // SIZES
 $small: 420px;
@@ -23,25 +24,31 @@ $small: 420px;
 /* DIRECTIVES */
 /**************/
 // Layout
+@import "./directives/container";
 @import "./directives/fluid";
 @import "./directives/row";
+@import "./directives/verbatim";
+
 
 /* COMPONENTS */
 /**************/
 
-@import "../../assets/tables";
-
-
-@import "../../assets/forms";
 
 @import "./components/sidenav/sidenav";
 @import "./components/navbar/navbar";
 @import "./components/buttons/buttons";
 @import "./components/input/input";
-@import "./components/color-pick/rgb-color-pick";
+@import "./components/color-pick/hsv-color-pick";
 @import "./components/dialog/dialog";
+@import "./components/link/link";
 
 $font-family: Arial, Helvetica, sans-serif !default;
+
+// MATERIAL DESIGN ICONS
+
+//@import "~/material-design-icons/iconfont/material-icons";
+///Users/german/Documents/clean-ui/node_modules/material-design-icons/iconfont/material-icons.css
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 *{    
     font-family: $font-family;
@@ -49,7 +56,8 @@ $font-family: Arial, Helvetica, sans-serif !default;
 
 html,body{
     background-color:$background;
-    color: rgba(0,0,0,0.87); 
-
+    color: $color;
+    padding:0;
+    margin:0;
 }
   

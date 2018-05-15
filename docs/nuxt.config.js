@@ -1,6 +1,6 @@
 module.exports = {
   plugins : [
-    './plugins/clean-ui.nuxt'
+    '../clean-ui.nuxt'
   ],
   /*
   ** Headers of the page
@@ -10,7 +10,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'description', name: 'description', content: 'clean-ui documentation' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -26,7 +26,6 @@ module.exports = {
   build: {
     /*
     ** Run ESLint on save
-    */
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -37,5 +36,6 @@ module.exports = {
         })
       }
     }
+     */
   }
 }

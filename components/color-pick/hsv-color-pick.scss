@@ -1,0 +1,26 @@
+div.a-color-pick{
+    display:inline;
+    cursor: pointer;
+    width:40px;     
+    text-align: center;    
+    vertical-align: middle;
+    
+    div.colours{
+        background-color: $background;
+        //top: 5px;
+        border-radius:0;
+        @include mat-elevation(10);
+        text-align: center;
+        position: absolute;
+        z-index:9999999999;   
+        border:none;     
+    }
+
+    i.material-icons{
+        @include mat-elevation(5);
+        vertical-align: middle;
+        border-radius:50%;
+        border: 5px solid gray;
+        padding: 8px;
+    }
+}
