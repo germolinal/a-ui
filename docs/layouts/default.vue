@@ -42,10 +42,11 @@
 </template>
 
 <script>
+var Base = require('~/plugins/base');
 export default {
   data(){
     return{
-      base: "/clean-ui/dist"
+      base: Base
     }
   }
 }

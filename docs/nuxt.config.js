@@ -1,6 +1,8 @@
+var Base = require('./plugins/base');
+
 module.exports = {
   router: {
-    //base: '/clean-ui/dist'
+    base: Base
   },
   plugins : [
     '../clean-ui.nuxt'
