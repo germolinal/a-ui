@@ -1,36 +1,44 @@
 <template>
   <div>
     <a-navbar>
-      <nuxt-link :to='base'>
+      <nuxt-link to='/'>
         <a-button  :variant="'primary'">Home</a-button>
       </nuxt-link>
 
-      <nuxt-link :to="base+'/buttons'">
+      <nuxt-link to="/buttons">
         <a-button  :variant="'primary'">Buttons</a-button>
       </nuxt-link>
 
-      <nuxt-link :to="base+'/colorpick'">
+      <nuxt-link to="/colorpick">
         <a-button :variant="'primary'">Color pick</a-button>
       </nuxt-link>
       
-      <nuxt-link :to="base+'/dialog'">
+      <nuxt-link to="/dialog">
         <a-button :variant="'primary'">Dialog</a-button>
       </nuxt-link>
       
-      <nuxt-link :to="base+'/inputs'">
+      <nuxt-link to="/inputs">
         <a-button :variant="'primary'">Inputs</a-button>
       </nuxt-link>
 
-      <nuxt-link :to="base+'/links'">
+      <nuxt-link to="/links">
         <a-button :variant="'primary'">Links</a-button>
+      </nuxt-link>
+
+      <nuxt-link to="/navbar">
+        <a-button :variant="'primary'">Navbar</a-button>
+      </nuxt-link>
+      
+      <nuxt-link to="/select">
+        <a-button :variant="'primary'">Select</a-button>
       </nuxt-link>
       
 
-      <nuxt-link :to="base+'/directives'">
+      <nuxt-link to="/directives">
         <a-button :variant="'primary'">Directives</a-button>
       </nuxt-link>
 
-      <nuxt-link :to="base+'/theming'">
+      <nuxt-link to="/theming">
         <a-button :variant="'primary'">Theming</a-button>
       </nuxt-link>
       
@@ -45,8 +53,7 @@
 var Base = require('~/plugins/base');
 export default {
   data(){
-    return{
-      base: ""
+    return{      
     }
   }
 }

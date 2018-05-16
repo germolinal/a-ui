@@ -1,9 +1,9 @@
 @import "../../common/elevations";
 
 div.a-navbar{    
-    position: absolute;
+    //position: absolute;
     z-index: 100;
-    width:100vw;
+    width:100%;
     left:0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -36,19 +36,12 @@ div.a-navbar{
     .a-close-navbar{
         display:none;
     }
-    span.a-open-navbar{
+    button.a-open-navbar{
         display:none;
-        cursor: pointer;
-        color: $primary;
-        background-color: $background;
-        border: 1px solid $primary;
-        padding: 7px;
         position:fixed;
         top: 5px;
         right:5px;
-        i{
-            vertical-align: middle;
-        }
+        
     }
 
     div.a-curtain{
@@ -71,14 +64,14 @@ div.a-navbar{
         a {
             text-decoration: none;
         }
-        span.a-open-navbar{
+        button.a-open-navbar{
             display:inline;
         }
         div.a-shown ~ div.a-curtain{
             display:inline;
         }
         .a-close-navbar{
-            display:inline;
+            display:inline;            
         }
         div.a-actions{
             
@@ -95,7 +88,7 @@ div.a-navbar{
             &.a-shown{                
                 transform: translateX(0%);
             }
-            *{ 
+            button{ 
                 display:block;
                 margin:4px 0;
                 width:100%;

@@ -1,15 +1,16 @@
 <template>
   
     <div class="a-navbar">
-        <span v-on:click="toggle()" class="a-open-navbar">
-            <slot  name="toggle-icon">
-                <a>MENU</a>
-            </slot>            
-        </span>
+        <a-button :variant="'primary'" v-on:click.native="toggle()" class="a-open-navbar">            
+                <i class="material-icons">menu</i>                        
+        </a-button>
 
         <div class='a-actions' v-children-close ref="menu">            
             <a-button class="a-close-navbar" :variant="'primary'"  >
-                CLOSE            
+                <i class="material-icons">close</i>
+                <a>
+                    CLOSE
+                </a>
             </a-button>
             <slot></slot>
         </div>
@@ -47,3 +48,4 @@ export default {
     }      
 }
 </script>
+

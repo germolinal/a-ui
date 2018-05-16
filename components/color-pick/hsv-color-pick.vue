@@ -117,16 +117,18 @@ export default {
         saturationRange : function(){
             
             var saturatedColor =  this.saturatedColor(this.hsv.h);
-            return "background: linear-gradient(to right,rgb(255,255,255),rgb("+saturatedColor.join(',')+"))";
+            var res = "";
+            res += "background: linear-gradient(to right,rgb(255,255,255),rgb("+saturatedColor.join(',')+"));";            
+            return res;
         },
         valueRange: function(){
             
             var fullyReflectiveColor =  this.fullyReflectiveColor(this.hsv.h,this.hsv.s);
-            return "background: linear-gradient(to right,rgb(0,0,0),rgb("+fullyReflectiveColor.join(',')+"))";
+            return "background: linear-gradient(to right,rgb(0,0,0),rgb("+fullyReflectiveColor.join(',')+"));";
         },        
         chosenColor: function(){            
             var color = this.value;
-            return "border-color: rgb("+color.r+','+color.g+','+color.b+")";
+            return "border-color: rgb("+color.r+','+color.g+','+color.b+");";
         },
         hsv:function()
         {
