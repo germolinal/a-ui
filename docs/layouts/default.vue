@@ -46,7 +46,7 @@ var Base = require('~/plugins/base');
 export default {
   data(){
     return{
-      base: Base
+      base: ""
     }
   }
 }
