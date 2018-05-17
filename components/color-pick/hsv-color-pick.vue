@@ -137,32 +137,3 @@ export default {
     },
 };
 </script>
-
-<style lang="scss" scoped>
-    
-    #hue,#saturation,#value{
-        
-        display:block;
-        width: 2in;
-        height: 0.2in;
-        background-color: red;
-        margin: 5px;
-        border: 1px solid black;        
-    }
-    #hue {
-         background: linear-gradient(to right, 
-            rgb(255,0,0), 
-            rgb(255,255,0),
-            rgb(0,255,0),
-            rgb(0,255,255),
-            rgb(0,0,255),
-            rgb(255,0,255),
-            rgb(255,0,0)
-         );
-    }
-
-    
-
-    
-</style>
-

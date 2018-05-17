@@ -2,7 +2,45 @@
 @import "../../common/elevations";
 
 div.a-sidenav{
-    .a-sidenav-item {
+    
+
+    z-index:9;
+    width: auto;
+    margin-top:auto;
+    margin-bottom:auto;
+    position: fixed;
+    left:0;
+    top: 50%;
+    //left: 50%;
+    transform: translate(0, -50%);
+
+    div.a-sidenav-item {
+        position: relative;
+        box-sizing: border-box;
+        display: block;
+        padding: 5px;
+        cursor: pointer;
+        border-radius:2px;
+        margin-top:2px;
+        margin-bottom:2px;
+        height: auto;
+        width: 100%;
+        display:block;
+    
+    
+        *{
+            display:block;
+            text-align:center;
+        }
+    
+        i {
+            vertical-align: middle; 
+            font-size: 0.3in;               
+        }
+        span{
+            font-size: 0.13in;
+        }
+        
         
         transform: translate(0, 0%);
         @include mat-elevation(5);

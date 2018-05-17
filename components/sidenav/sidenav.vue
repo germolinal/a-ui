@@ -37,18 +37,3 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
-
-div{    
-    z-index:9;
-    width: auto;
-    margin-top:auto;
-    margin-bottom:auto;
-    position: fixed;
-    left:0;
-    top: 50%;
-    //left: 50%;
-    transform: translate(0, -50%);
-}
-
-</style>
