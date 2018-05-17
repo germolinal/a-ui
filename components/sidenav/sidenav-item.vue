@@ -1,6 +1,6 @@
 <template>
     <div class="a-sidenav-item">
-        <slot></slot>
+        <slot>ITEM!</slot>
     </div>  
 </template>
 

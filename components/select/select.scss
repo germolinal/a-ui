@@ -1,0 +1,39 @@
+@import '../../common/elevations';
+
+div.a-select{
+    display:inline-block;
+    
+    div.a-selected{
+        cursor:pointer;
+        color: $primary;
+        background-color: $background;
+        border: 1px solid $primary;
+
+        padding: 0.05in 0.12in;
+        padding-right:0;
+        *{
+            vertical-align: middle;
+        }
+        i{              
+            font-size:150%;            
+            display:inline;            
+            padding: 5px;
+        }
+    }
+
+    div.items{
+        @include mat-elevation(2);    
+        position:absolute; 
+        span{
+            display:block;
+            padding: 0.05in 0.12in;
+            cursor:pointer;
+            background-color: $background;
+            border: 1px solid transparent;
+            &:hover{
+                color: $primary;
+                border-color: $primary;
+            }
+        }
+    }
+}

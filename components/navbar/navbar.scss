@@ -61,6 +61,7 @@ div.a-navbar{
         height:100vh;
         left:auto;
         width:auto;
+
         a {
             text-decoration: none;
         }
@@ -83,6 +84,7 @@ div.a-navbar{
             z-index:99;
             padding:4px;
             height:100vh;
+            top:0;
             transform: translateX(110%);
 
             &.a-shown{                

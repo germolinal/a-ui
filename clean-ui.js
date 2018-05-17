@@ -7,6 +7,7 @@ import Row from "./directives/row";
 import Selected from "./directives/selected";
 import Container from "./directives/container";
 import Verbatim from "./directives/verbatim";
+import WithSidenav from "./directives/with-sidenav";
 
 /* COMPONENTS */
 /**************/
@@ -36,6 +37,7 @@ export default {
       Vue.directive('selected',Selected);
       Vue.directive('container',Container);
       Vue.directive('verbatim',Verbatim);
+      Vue.directive('with-sidenav',WithSidenav);
 
       
       /* COMPONENTS */
@@ -45,7 +47,7 @@ export default {
       Vue.component(prefix+'-dialog',Dialog);
       Vue.component(prefix+'-hsv-color-pick',HSVColorPick);
       Vue.component(prefix+'-input',Input);
-      Vue.component(prefix+'-select',Select);
+      Vue.component(prefix+'-select',Select);      
       Vue.component(prefix+'-sidenav',SideNav);
       Vue.component(prefix+'-sidenav-item',SideNavItem);
       Vue.component(prefix+'-navbar',NavBar);

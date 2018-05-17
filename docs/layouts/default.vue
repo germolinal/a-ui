@@ -32,6 +32,10 @@
       <nuxt-link to="/select">
         <a-button :variant="'primary'">Select</a-button>
       </nuxt-link>
+
+      <nuxt-link to="/sidenav">
+        <a-button :variant="'primary'">Sidenav</a-button>
+      </nuxt-link>
       
 
       <nuxt-link to="/directives">
