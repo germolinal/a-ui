@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/germolinal/a-ui.git"
+    "url": "https://github.com/germolinal/clean-ui.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/germolinal/a-ui/issues"
+    "url": "https://github.com/germolinal/clean-ui/issues"
   },
-  "homepage": "https://github.com/germolinal/a-ui#readme",
+  "homepage": "https://germolinal.github.com/clean-ui",
   "dependencies": {
     "material-design-icons": "^3.0.1",
     "node-sass": "^4.9.0",
