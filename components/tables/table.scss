@@ -1,0 +1,49 @@
+@mixin header{
+    color: rgba($color,0.6);        
+    font-size: 85%;
+}
+table.a-table{
+    
+    *.selectable{
+        cursor:pointer;
+        &:hover{
+            background-color: rgb(240,240,240);
+        }
+    }
+
+    border-collapse: collapse;
+    font-size: 90%;
+    margin: 15px auto;    
+    td{
+        border-bottom: 1px solid rgba($color,0.12);
+        padding: 0.7em 0.9em;
+        text-align: center;
+        
+    }
+
+    thead{
+        @include header;
+        
+    }
+    tbody{
+        color: $color;
+        
+    }
+
+    &.a-double-entry{
+        td:first-child {
+            @include header;
+            border-right: 1px solid rgba($color,0.12);            
+            text-align:left;
+            
+        }
+        td.check-cell{
+            i{
+                font-size:150%;                
+            }
+            padding:0;            
+        }
+    }
+
+    
+}

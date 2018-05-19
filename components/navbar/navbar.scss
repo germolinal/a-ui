@@ -1,7 +1,8 @@
 @import "../../common/elevations";
 
 div.a-navbar{    
-    //position: absolute;
+    position: fixed;
+    top:0;
     z-index: 100;
     width:100%;
     left:0;

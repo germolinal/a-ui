@@ -22,6 +22,9 @@ import SideNav from "./components/sidenav/sidenav";
 import SideNavItem from "./components/sidenav/sidenav-item";
 import NavBar from "./components/navbar/navbar";
 import Link from "./components/link/link";
+import Table from "./components/tables/table";
+import DoubleEntryTable from "./components/tables/double-entry-table";
+import CheckTable from "./components/tables/check-table";
 
 const prefix="a";
 
@@ -52,7 +55,9 @@ export default {
       Vue.component(prefix+'-sidenav-item',SideNavItem);
       Vue.component(prefix+'-navbar',NavBar);
       Vue.component(prefix+'-link',Link);
-
+      Vue.component(prefix+'-table',Table);
+      Vue.component(prefix+'-double-entry-table',DoubleEntryTable);
+      Vue.component(prefix+'-check-table',CheckTable);
 
 
 

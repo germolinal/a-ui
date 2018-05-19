@@ -15,8 +15,23 @@ npm install --save clean-ui
 ### Nuxt
 
 1. Install clean-ui
+```
+npm install --save clean-ui
+```
+
 2. Add the clean-ui plugin
- plugins : [
-    './plugins/clean-ui.nuxt'
-],
+```
+module.exports = {
+  plugins : [    
+    '~/node_modules/clean-ui/clean-ui.nuxt'
+  ],
+...
+```
+
+3. Add something!
+```
+<template>
+    <a-button :variant="'primary'"> My first button </a-button>
+<template>
+```
 

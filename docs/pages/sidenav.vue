@@ -17,11 +17,33 @@
 
     <textarea v-verbatim style="height:210px">
        
+    <a-sidenav>
+        <a-sidenav-item v-selected>
+            <i class="material-icons">close</i>
+            <span>Close</span>    
+        </a-sidenav-item>
+
+        <a-sidenav-item>
+            <i class="material-icons">code</i>
+            <span>Code</span>    
+        </a-sidenav-item>
+
+        <a-sidenav-item>
+            <i class="material-icons">explore</i>
+            <span>Explore</span>    
+        </a-sidenav-item>
+
+        <a-sidenav-item>
+            <i class="material-icons">question_answer</i>
+            <span>Forum</span>    
+        </a-sidenav-item>
+    </a-sidenav>
+
 
     </textarea>
 
     
-    <p>Leads to something very similar to the navigation on top of this documentation website</p>   
+    <p>Leads to the sidenav available in this page</p>   
     
     <a-sidenav>
         <a-sidenav-item v-selected>
