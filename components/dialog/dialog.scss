@@ -25,7 +25,7 @@
 .a-dialog-inter{   
     @include mat-elevation(24);     
     position:fixed;
-    background-color: white;
+    background-color: $background;
     color:black;
     top: 0.25in;
     left: 0.5in;

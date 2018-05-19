@@ -25,6 +25,7 @@ import Link from "./components/link/link";
 import Table from "./components/tables/table";
 import DoubleEntryTable from "./components/tables/double-entry-table";
 import CheckTable from "./components/tables/check-table";
+import EditableCell from "./components/tables/editable-cell";
 
 const prefix="a";
 
@@ -58,6 +59,7 @@ export default {
       Vue.component(prefix+'-table',Table);
       Vue.component(prefix+'-double-entry-table',DoubleEntryTable);
       Vue.component(prefix+'-check-table',CheckTable);
+      Vue.component(prefix+'-editable-cell',EditableCell);
 
 
 

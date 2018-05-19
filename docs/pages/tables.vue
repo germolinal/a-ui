@@ -182,6 +182,60 @@
       <a-check-table v-model="data" :rows="rows"></a-check-table>
     </div>
 
+
+
+    <h2>Editable cells</h2>
+
+    <h3>Example</h3>    
+
+    <p>The following html</p>
+
+    <textarea v-verbatim >
+       
+      <a-double-entry-table>
+          <thead>
+              <tr>
+                  <td>Column 1</td>
+                  <td>Column 2</td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Row 1</td>
+
+                  <a-editable-cell></a-editable-cell>
+              </tr>
+          </tbody>
+      </a-double-entry-table>
+
+    </textarea>
+
+    
+    <p>Leads to </p>   
+    <div class="example-content" >
+      <a-double-entry-table>
+          <thead>
+              <tr>
+                  <td>Column 1</td>
+                  <td>Column 2</td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Row 1</td>
+
+                  <a-editable-cell v-model="editableValue"></a-editable-cell>
+              </tr>
+          </tbody>
+      </a-double-entry-table>
+
+      {{editableValue}}
+    </div>
+
+
+
+
+
   </div>
 </template>
 
@@ -193,7 +247,9 @@ export default {
       data: {
         'column 1':['row 1','row 3'], 
         'column 2':['row 1', 'row 2','row 3'],
-        'column 3':['row 1', 'row 2']},      
+        'column 3':['row 1', 'row 2']
+        },
+        editableValue: 'value'      
     }
   }
 }

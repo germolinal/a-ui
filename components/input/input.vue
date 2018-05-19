@@ -21,7 +21,7 @@ export default {
             
             // Check pristinness            
             if(!value ){
-                main.classList.remove('non-pristine');
+                main.classList.remove('non-pristine');                
             }else {
                 main.classList.add('non-pristine');
             }
@@ -46,7 +46,7 @@ export default {
                     }else{
                         main.classList.remove('invalid');                    
                     }
-                }
+                }                
                 this.$emit('input', parseFloat(value));
             }else{
                 if(!value){

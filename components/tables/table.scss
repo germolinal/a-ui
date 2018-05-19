@@ -1,13 +1,62 @@
+@import "../../common/elevations.scss";
+
+
 @mixin header{
     color: rgba($color,0.6);        
     font-size: 85%;
 }
+
 table.a-table{
     
+    td.editable-cell{
+
+        div.values{
+            i{
+                font-size: inherit;
+                float:right;
+                margin-left: 5px;
+            }
+            span{
+                width: 100%;
+                height: 100%;
+                
+            }
+            cursor:pointer;
+        }
+        
+        div.editor{
+            cursor: default;
+            background-color: $background;
+            transform: translate(0,-50%);
+            input{
+                outline:none;
+                border: 1px solid darken(white,17);
+                padding: 0.5em;
+                border-radius: 0;
+            }
+            *{                
+                display:block;                 
+            }
+            button{
+                margin-top: 10px;
+                float:right;
+            }               
+            padding: 0.6em;            
+            z-index: 999999999;
+            position:absolute;
+            @include mat-elevation(5);     
+            i{
+                font-size: inherit;
+                cursor: pointer;
+                padding: 5px;
+            }
+        }
+    }
+
     *.selectable{
         cursor:pointer;
         &:hover{
-            background-color: rgb(240,240,240);
+            background-color: darken($background,7);
         }
     }
 
