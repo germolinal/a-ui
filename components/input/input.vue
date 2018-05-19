@@ -47,6 +47,7 @@ export default {
                         main.classList.remove('invalid');                    
                     }
                 }
+                this.$emit('input', parseFloat(value));
             }else{
                 if(!value){
                     main.classList.remove('invalid');                                            
@@ -57,13 +58,9 @@ export default {
                         main.classList.remove('invalid');                    
                     }
                 }
+                this.$emit('input', value)
             }
-        
-
-            
-            
-
-            this.$emit('input', value)
+                
         }
     },
     data(){

@@ -1,6 +1,8 @@
 <template>
-  <div class="a-sidenav" v-select>      
-    <slot></slot>
+  <div class="a-sidenav"> 
+    <div class='wrap' v-select>
+        <slot></slot>
+    </div>         
   </div>
 </template>
 

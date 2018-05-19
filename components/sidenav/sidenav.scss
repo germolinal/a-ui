@@ -1,67 +1,66 @@
 @import "../../common/palette";
-@import "../../common/elevations";
+//@import "../../common/elevations";
 
 div.a-sidenav{
     
 
     z-index:9;
     width: auto;
-    margin-top:auto;
-    margin-bottom:auto;
     position: fixed;
+    height:100vh;
     left:0;
-    top: 50%;
-    //left: 50%;
-    transform: translate(0, -50%);
-
-    div.a-sidenav-item {
+    top:0;
+    background-color: $primary;    
+    div.wrap{
+        left:0;
         position: relative;
-        box-sizing: border-box;
-        display: block;
-        padding: 5px;
-        cursor: pointer;
-        border-radius:2px;
-        margin-top:2px;
-        margin-bottom:2px;
-        height: auto;
-        width: 100%;
-        display:block;
-    
-    
-        *{
+        top: 50%;
+        transform: translate(0, -50%);
+        div.a-sidenav-item {
+            position: relative;
+            box-sizing: border-box;
+            display: block;
+            padding: 5px;
+            cursor: pointer;
+            height: auto;
+            width: 100%;
             display:block;
-            text-align:center;
-        }
-    
-        i {
-            vertical-align: middle; 
-            font-size: 0.3in;               
-        }
-        span{
-            font-size: 0.13in;
-        }
+            transition: all 0.2s;
         
+            *{
+                display:block;
+                text-align:center;
+            }
         
-        transform: translate(0, 0%);
-        @include mat-elevation(5);
-        color: $background;
-        background-color: $primary;
-
-        &:hover {
-            background-color: lighten-color($primary,0.30);            
-        }
-
-        &.a-selected{
-            background-color: $secondary;            
-        }
-        @media only screen and (max-width: $small) {
-            span {
-                display:none;
+            i {
+                vertical-align: middle; 
+                font-size: 0.3in;               
             }
-            i{
-                padding: 5px;
+            span{
+                font-size: 0.13in;
             }
-        }
+                                             
+            color: $background;
+            background-color: $primary;
     
+            &:hover {                
+                width: 105%;    
+                border-radius: 0 2px 2px 0;            
+            }
+    
+            &.a-selected{
+                background-color: $secondary;            
+            }
+            @media only screen and (max-width: $small) {
+                span {
+                    display:none;
+                }
+                i{
+                    padding: 5px;
+                }
+            }
+        
+        }
     }
+    
 }
