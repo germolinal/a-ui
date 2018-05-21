@@ -190,7 +190,7 @@
 
     <p>The following html</p>
 
-    <textarea v-verbatim >
+    <textarea v-verbatim style="height: 250px">
        
       <a-double-entry-table>
           <thead>
