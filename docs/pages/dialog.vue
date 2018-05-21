@@ -25,7 +25,7 @@
     <p>For example, the following html</p>
 
     <textarea v-verbatim>
-        <a-raised-button :variant="'primary'" @click.native="showDialog1 = true">Open dialog</a-raised-button>
+        <a-button :variant="'primary'" @click.native="showDialog1 = true">Open dialog</a-button>
         
         <a-dialog v-if="showDialog1"  @close="showDialog1 = false">
             <p>Lets put some content here!</p>
@@ -36,7 +36,7 @@
     <p>Leads to </p>    
     
     <div class="example-content">
-        <a-raised-button :variant="'primary'" @click.native="showDialog1 = true">Open dialog</a-raised-button>
+        <a-button :variant="'primary'" @click.native="showDialog1 = true">Open dialog</a-button>
         <a-dialog v-if="showDialog1" @close="showDialog1 = false">
             <p>Lets put some content here!</p>
         </a-dialog>
@@ -55,7 +55,7 @@
 
     <textarea v-verbatim>
         
-        <a-raised-button  :variant="'primary'" @click.native="showDialog2 = true">Open dialog</a-raised-button>
+        <a-button  :variant="'primary'" @click.native="showDialog2 = true">Open dialog</a-button>
         
         <a-dialog :title="'I am a title'" v-if="showDialog2"  @close="showDialog2 = false">
             <p>Lets put some content here!</p>
@@ -67,7 +67,7 @@
     <p>Leads to </p>  
 
     <div class="example-content">
-        <a-raised-button  :variant="'primary'" @click.native="showDialog2 = true">Open dialog</a-raised-button>
+        <a-button  :variant="'primary'" @click.native="showDialog2 = true">Open dialog</a-button>
             
         <a-dialog :title="'I am a title'" v-if="showDialog2"  @close="showDialog2 = false">
             <p>Lets put some content here!</p>
@@ -90,7 +90,7 @@
 
     <textarea v-verbatim>
         
-        <a-raised-button :variant="'primary'" @click.native="showDialog3 = true">Open dialog</a-raised-button>
+        <a-button :variant="'primary'" @click.native="showDialog3 = true">Open dialog</a-button>
         
         <a-dialog :actions="actions" :title="'I am a title'" v-if="showDialog3"  @close="showDialog3 = false">
             <p>Lets put some content here!</p>
@@ -102,7 +102,7 @@
     <p>Leads to </p>    
 
     <div class="example-content">
-        <a-raised-button  :variant="'primary'" @click.native="showDialog3 = true">Open dialog</a-raised-button>
+        <a-button  :variant="'primary'" @click.native="showDialog3 = true">Open dialog</a-button>
             
         <a-dialog :actions="actions" :title="'I am a title'" v-if="showDialog3"  @close="showDialog3 = false">
             <p>Lets put some content here!</p>

@@ -13,6 +13,7 @@ import WithSidenav from "./directives/with-sidenav";
 /**************/
 
 import Button from "./components/buttons/button";
+import FlatButton from "./components/buttons/flat-button";
 import RaisedButton from "./components/buttons/raised-button";
 import Dialog from "./components/dialog/dialog";
 import HSVColorPick from "./components/color-pick/hsv-color-pick";
@@ -47,7 +48,8 @@ export default {
       /* COMPONENTS */
       /**************/
       Vue.component(prefix+'-button',Button);
-      Vue.component(prefix+'-raised-button',RaisedButton);
+      Vue.component(prefix+'-flat-button',FlatButton);
+      Vue.component(prefix+'-raised-button',RaisedButton);      
       Vue.component(prefix+'-dialog',Dialog);
       Vue.component(prefix+'-hsv-color-pick',HSVColorPick);
       Vue.component(prefix+'-input',Input);

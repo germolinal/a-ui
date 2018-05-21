@@ -1,6 +1,6 @@
 <template>
 
-    <button class="a-flat" v-bind:class="variant">   
+    <button class="a-common" v-bind:class="variant">   
         <slot>Flat Button Text</slot>        
     </button>
 </template>

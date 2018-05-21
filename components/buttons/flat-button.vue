@@ -1,7 +1,7 @@
 <template>
 
-    <button class="a-raised" v-bind:class="variant">   
-        <slot>Raised Button Text</slot>        
+    <button class="a-flat" v-bind:class="variant">   
+        <slot>Simple Button Text</slot>        
     </button>
     
 </template>

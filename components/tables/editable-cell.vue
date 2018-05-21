@@ -1,13 +1,14 @@
 <template>
     <td class='editable-cell'>
-        <div class='values' v-on:click='editing = true' >
+        <div class='values'>
             <span >{{value}}</span>
-            <i class='material-icons'>mode_edit</i>       
+            <i class='material-icons' v-on:click='editing = true'>mode_edit</i>       
         </div>
 
         <div v-if="editing" class='editor'>
-            <input ref='input' :value="value" type="text" v-on:input="update()" @keyup.enter="editing=false">                      
-            <a-raised-button :variant="'primary'" v-on:click.native='editing = false'>Done</a-raised-button>            
+            <input ref='input' :value="value" type="text" @keyup.enter="update()">                      
+            <a-raised-button :variant="'primary'" v-on:click.native="update()">Done</a-raised-button>            
+            <a-flat-button :variant="'primary'" v-on:click.native='editing = false'>Cancel</a-flat-button>            
         </div>         
     </td>
     
@@ -18,7 +19,8 @@ export default {
     props: ['value'],
     methods: {
         update: function(){
-            this.$emit('input',this.$refs.input.value);
+            this.$emit('input',this.$refs.input.value);   
+            this.editing = false;         
         }
     },
     data(){

@@ -12,24 +12,30 @@
     @return lighten-color($color,$a);
 }
 
-@mixin flat-button-feedback($color) {
+@mixin common-button-feedback($color) {
     color: $color;   
-    border: 1px solid $color;                         
-    &:hover {
-        color: $secondary;
-        border: 1px solid $secondary;
-        //background-color: hover-color($color);        
-    }      
-
+    border: 1px solid $color;                             
     &:active {
-        background-color: ripple-color($secondary);                
+        background-color: ripple-color($color);                
+        background-size: 100%;
+    } 
+}
+
+
+@mixin flat-button-feedback($color) {
+    background-color: transparent;     
+    color: $color;    
+    &:active {
+        background-color: ripple-color($color);                
         background-size: 100%;
     } 
 }
 
 
 @mixin raised-button-feedback($color) {
-    background-color: $color;                                    
+    background-color: $color;     
+    color: $background;            
+    @include mat-elevation(2);
     &:active {
         background-color: ripple-color($color);                
         background-size: 100%;
@@ -44,7 +50,7 @@ button {
     cursor: pointer;
     height: 0.325in;
     min-width: 0.55in;
-    //border-radius: 0.0125in;
+    border-radius: 0.0125in;
     font-size: 14px;
     
     overflow: visible;
@@ -60,10 +66,46 @@ button {
         vertical-align: middle;
     }
 
-    &.a-flat {
+    &.a-common {
         background-color: $background;
         background-position: center;
         
+        &:hover {
+            transition: background 0.2s;
+        }
+
+        &:active{            
+            transition: background 0s;
+        }
+
+        &.primary{
+            @include common-button-feedback($primary);
+        }
+
+        &.accent{
+            @include common-button-feedback($secondary);                        
+        }
+
+        &.warn{
+            @include common-button-feedback($warn);                        
+        }
+
+        &.basic{
+            @include common-button-feedback(black);                        
+        }
+        
+
+        &.disabled{
+            color: #bbbbbb;
+            cursor:default;
+
+        }
+    }
+
+    &.a-flat {
+        color: white;
+        background-position: center;        
+
         &:hover {
             transition: background 0.2s;
         }
@@ -84,23 +126,21 @@ button {
             @include flat-button-feedback($warn);                        
         }
 
-        &.basic{
+        &.basic{            
             @include flat-button-feedback(black);                        
+            color: black;
+            background-color:white;
         }
-        
 
         &.disabled{
-            color: #bbbbbb;
-            cursor:default;
-
+            color: #adadad;            
         }
     }
 
-    &.a-raised {
-        color: white;
-        background-position: center;
-        @include mat-elevation(2);
 
+    &.a-raised {        
+        background-position: center;
+        
         &:hover {
             transition: background 0.2s;
         }
@@ -121,15 +161,15 @@ button {
             @include raised-button-feedback($warn);                        
         }
 
-        &.basic{            
+        &.basic{
             @include raised-button-feedback(black);                        
-            color: black;
-            background-color:white;
         }
+        
 
         &.disabled{
-            color: #adadad;
-            background-color:#dcdcdc;
+            color: #bbbbbb;
+            cursor:default;
+
         }
     }
     

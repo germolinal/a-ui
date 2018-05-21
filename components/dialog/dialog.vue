@@ -14,7 +14,7 @@
 
         <div class="a-dialog-footer">
           <a-raised-button :variant='"primary"' v-for='(func, name, index) in actions' :key='index' v-on:click.native='func()'>{{name}}</a-raised-button>
-          <a-button :variant="'primary'" v-on:click.native="$emit('close')">Close</a-button>            
+          <a-flat-button :variant="'primary'" v-on:click.native="$emit('close')">Close</a-flat-button>            
         </div>
       </div>
   </div>
