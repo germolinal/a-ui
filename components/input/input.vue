@@ -1,6 +1,6 @@
 <template>
   <div ref="main" class="a-input" >      
-    <input ref="in" :min="min" :max="max" :size="size || 14" :value="value" @input="update()">
+    <input v-on:keyup.enter="$emit('enter')" ref="in" :min="min" :max="max" :size="size || 14" :value="value" @input="update()">
     <label>{{label | FixString}}</label>    
   </div>
 </template>

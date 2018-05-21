@@ -203,7 +203,7 @@
               <tr>
                   <td>Row 1</td>
 
-                  <a-editable-cell></a-editable-cell>
+                  <a-editable-cell v-model="editableValue"></a-editable-cell>
               </tr>
           </tbody>
       </a-double-entry-table>

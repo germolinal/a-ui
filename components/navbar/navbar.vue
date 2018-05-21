@@ -34,12 +34,25 @@ export default {
                 var children = e.children;
                 const n = children.length;
                 for(var i=0; i< n; i++){
-                    var element = children[i];                    
-                    if(element.tagName === 'INPUT'){
-                        continue;
-                    }
-                    element.onclick = function(){
-                        e.classList.toggle("a-shown");
+                    var element = children[i];                      
+                    if(element.tagName === 'INPUT' ){
+                        element.addEventListener("keyup", function(event) {                            
+                            event.preventDefault();                            
+                            if (event.keyCode === 13) {                                
+                                e.classList.toggle("a-shown");
+                            }
+                        });
+                    }else if(element.tagName === 'DIV' && element.classList.contains('a-input')){                        
+                        element.children[0].addEventListener("keyup", function(event) {                            
+                            event.preventDefault();                            
+                            if (event.keyCode === 13) {                                
+                                e.classList.toggle("a-shown");
+                            }
+                        });                           
+                    }else{
+                        element.onclick = function(){
+                            e.classList.toggle("a-shown");
+                        }
                     }
                 }
                 

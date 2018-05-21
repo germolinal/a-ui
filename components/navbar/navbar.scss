@@ -29,10 +29,30 @@ div.a-navbar{
         -moz-transition: transform 0.35s ease;
         transition: transform 0.35s ease;         
         transform: translateX(0%);    
-        input,span{
+        span{
             box-sizing: border-box;
             margin: 5px;        
             height:0.325in;            
+        }
+
+        div.a-input{
+            display: inline-block;
+            label{
+                color:lighten($color,40); 
+                font-size:90%; 
+                font-weight:normal;
+                position:absolute;
+                pointer-events:none;
+                left:5px;
+                line-height:0.323in;
+            }
+            input:focus ~ label, &.non-pristine input ~ label {
+                display:none;
+            }
+            input{
+                margin-top:0;
+                height:0.323in;
+            }
         }
     }
     .a-close-navbar{

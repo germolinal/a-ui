@@ -1,6 +1,7 @@
 <template>
   <div>
     <a-navbar>
+
       <nuxt-link to='/'>
         <a-button  :variant="'primary'">Home</a-button>
       </nuxt-link>
@@ -49,7 +50,8 @@
       <nuxt-link to="/theming">
         <a-button :variant="'primary'">Theming</a-button>
       </nuxt-link>
-      
+            
+
     </a-navbar>
 
     <nuxt/>
