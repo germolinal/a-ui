@@ -1,0 +1,31 @@
+p.a-toast{    
+    position: fixed;
+    border-radius: 0.1in;
+    font-size: 0.15in;
+    background-color: rgba($curtain,0.77);
+    color: $background;
+    padding:0.5em 2em;
+    left:  50%;
+    transform: translate(-50%);
+    bottom: -6em; 
+    transition: bottom 0.3s ease;    
+    text-align: center;
+    margin:0;
+    z-index: 9999999999;
+    &.showing{
+        bottom: 3em;
+    }
+    
+
+    
+    @media only screen and (max-width: $small) {
+        transition: bottom 0.2s ease;            
+        background-color: rgba($curtain,0.87);
+        width: 100vw;
+        border-radius:0;
+        &.showing{
+            bottom: 0;
+        }   
+    }
+    
+}

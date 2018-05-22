@@ -42,6 +42,9 @@
         <a-button :variant="'primary'">Tables</a-button>
       </nuxt-link>
       
+      <nuxt-link to="/feedback">
+        <a-button :variant="'primary'">Feedback</a-button>
+      </nuxt-link>      
 
       <nuxt-link to="/directives">
         <a-button :variant="'primary'">Directives</a-button>

@@ -9,7 +9,11 @@
     height:100vh;
     z-index: 9999999;
     background-color:$curtain;
-    font-size: 0.16in;            
+    font-size: 0.16in;    
+    display: none;
+    &.open{
+        display: block;
+    }        
 }
 
 

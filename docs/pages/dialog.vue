@@ -13,9 +13,8 @@
     <h3>Example 1</h3>    
 
     <p>
-        Dialogs require you to set a variable to toggle them. This needs to be done
-        by setting the "v-if" and the "@close" property to the dialog component; and 
-        by adding a "show" to a button (or certain event that would show the dialog).
+        Dialogs require you to reference them, and then open them using the 'show()' method when something happens. 
+        For example, when a button is clicked.
     </p>
 
     <p>
@@ -25,21 +24,20 @@
     <p>For example, the following html</p>
 
     <textarea v-verbatim>
-        <a-button :variant="'primary'" @click.native="showDialog1 = true">Open dialog</a-button>
-        
-        <a-dialog v-if="showDialog1"  @close="showDialog1 = false">
+        <a-dialog ref='dialogOne'>
             <p>Lets put some content here!</p>
         </a-dialog>
+        <a-button :variant="'primary'" @click.native="$refs.dialogOne.show()">Open dialog</a-button>
     </textarea>
 
     
     <p>Leads to </p>    
     
-    <div class="example-content">
-        <a-button :variant="'primary'" @click.native="showDialog1 = true">Open dialog</a-button>
-        <a-dialog v-if="showDialog1" @close="showDialog1 = false">
+    <div class="example-content">        
+        <a-dialog ref='dialogOne'>
             <p>Lets put some content here!</p>
         </a-dialog>
+        <a-button :variant="'primary'" @click.native="$refs.dialogOne.show()">Open dialog</a-button>
     </div>
 
 
@@ -55,25 +53,24 @@
 
     <textarea v-verbatim>
         
-        <a-button  :variant="'primary'" @click.native="showDialog2 = true">Open dialog</a-button>
-        
-        <a-dialog :title="'I am a title'" v-if="showDialog2"  @close="showDialog2 = false">
+        <a-dialog :title="'I am a title'" ref='dialogTwo'>
             <p>Lets put some content here!</p>
             <a-button :variant="'primary'" >One button inside a dialog</a-button>            
         </a-dialog>
+        <a-button :variant="'primary'" @click.native="$refs.dialogTwo.show()">Open dialog</a-button>
+        
     </textarea>
 
     
     <p>Leads to </p>  
 
     <div class="example-content">
-        <a-button  :variant="'primary'" @click.native="showDialog2 = true">Open dialog</a-button>
-            
-        <a-dialog :title="'I am a title'" v-if="showDialog2"  @close="showDialog2 = false">
+        <a-dialog :title="'I am a title'" ref='dialogTwo'>
             <p>Lets put some content here!</p>
-            
             <a-button :variant="'primary'" >One button inside a dialog</a-button>            
         </a-dialog>
+        <a-button :variant="'primary'" @click.native="$refs.dialogTwo.show()">Open dialog</a-button>
+
     </div>  
 
 
@@ -88,28 +85,38 @@
     </p>
     <p>The following html</p>
 
-    <textarea v-verbatim>
+    <textarea v-verbatim style="height: 220px">
         
-        <a-button :variant="'primary'" @click.native="showDialog3 = true">Open dialog</a-button>
-        
-        <a-dialog :actions="actions" :title="'I am a title'" v-if="showDialog3"  @close="showDialog3 = false">
+        <a-dialog  :actions="actions" :title="'I am a title'" ref='dialogThree'>
             <p>Lets put some content here!</p>
             <a-button :variant="'primary'" >One button inside a dialog</a-button>            
         </a-dialog>
+        
+        <a-toast ref='myToast'>
+            Action called!
+        </a-toast>
+
+        <a-button :variant="'primary'" @click.native="$refs.dialogThree.show()">Open dialog</a-button> 
+
     </textarea>
 
     
     <p>Leads to </p>    
 
     <div class="example-content">
-        <a-button  :variant="'primary'" @click.native="showDialog3 = true">Open dialog</a-button>
-            
-        <a-dialog :actions="actions" :title="'I am a title'" v-if="showDialog3"  @close="showDialog3 = false">
+        
+        <a-dialog  :actions="actions" :title="'I am a title'" ref='dialogThree'>
             <p>Lets put some content here!</p>
-            
             <a-button :variant="'primary'" >One button inside a dialog</a-button>            
         </a-dialog>
+        
+        <a-toast ref='myToast'>
+            Action called!
+        </a-toast>
+
+        <a-button :variant="'primary'" @click.native="$refs.dialogThree.show()">Open dialog</a-button>        
     </div>
+    
 
 
   </div>
@@ -117,15 +124,15 @@
 
 <script>
     export default {
+        methods: {
+            showToast : function(){
+                this.$refs.myToast.show();
+            }
+        },
         data: function(){
-            return{
-                showDialog1: false,
-                showDialog2: false,
-                showDialog3: false,
+            return{                
                 actions: {
-                    "Test": function(){
-                        alert("Test");
-                    }
+                    "Show Toast": this.showToast
                 }
             }
         }

@@ -21,6 +21,7 @@ export default {
         update: function(){
             this.$emit('input',this.$refs.input.value);   
             this.editing = false;         
+            this.$emit('submit');   
         }
     },
     data(){
