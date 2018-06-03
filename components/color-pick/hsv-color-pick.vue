@@ -8,7 +8,8 @@
     <div class='colours' v-if="showColorSelector">
         <input :value="hsv.h" type='range' min="0" max="360" ref='hue' id='hue' @input="update()">
         <input :value="hsv.s" v-bind:style="saturationRange"  type='range' min="0" max="100" ref='saturation' id='saturation' @input="update()">
-        <input :value="hsv.v" v-bind:style="valueRange" min="0" max="100" type='range' ref='val' id='value' @input="update()">        
+        <input :value="hsv.v" v-bind:style="valueRange" min="0" max="100" type='range' ref='val' id='value' @input="update()">   
+        <a-flat-button @click.native="showColorSelector = !showColorSelector" :variant="'primary'">Done</a-flat-button>        
     </div>
   </div>
 
@@ -26,7 +27,7 @@ export default {
 
     methods: {
         update() {
-            const color = this.rgbColor();            
+            const color = this.rgbColor();              
             this.$emit('input', {
                 r: Math.round(color[0]), g:Math.round(color[1]), b: Math.round(color[2])
             })

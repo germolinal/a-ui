@@ -5,26 +5,44 @@
     <p>
 
     There are two kinds of buttons in Clean-UI: 
-    <a-link :href="'#flat-buttons'">Flat Buttons</a-link>  and 
-    <a-link :href="'#link-buttons'">link Buttons</a-link>.    
+    <a-link :href="'#common-buttons'">Common Buttons</a-link>, 
+    <a-link :href="'#flat-buttons'">Flat Buttons</a-link>, and   
+    <a-link :href="'#raised-buttons'">Raised Buttons</a-link>.    
     
-    They both allow the following variants:        
+    All of them allow the following variants:        
     
     </p>
-    <ul>
-        <li>Primary: Primary color is used</li>
-        <li>Accent: Secondary color is used.</li>
-        <li>Warn: Warn color is used.</li>
-        <li>Basic: Black is used.</li>
-        <li>Disabled: Gray is used.</li>
-    </ul>
+
+
+    <h3>Events</h3>
+
+    <a-table>
+        <thead>
+            <tr><td>This component has no events</td></tr>
+        </thead>        
+    </a-table>
+
+
+    <h3>Properties</h3>
+
+
+    <a-table>
+        <thead>
+            <tr><td>Property</td><td>Description</td><td>Type of data</td></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>variant</td><td>Defines the style. See examples</td><td>String</td>
+            </tr>                        
+        </tbody>
+    </a-table>
 
     <p>
         The variant changes the color of the button, but not the behavior or the size. The colors come from the 
         colors in the theme.
     </p>
 
-    <h2 id='flat-buttons'>Flat buttons</h2>
+    <h2 id='common-buttons'>Common buttons</h2>
 
     <h3>Example 1</h3>    
 
@@ -92,7 +110,7 @@
 
 
 
-    <h2 id='link-buttons'>Link buttons</h2>
+    <h2 id='flat-buttons'>Flat buttons</h2>
 
     <p>
         Inspired in Material Design, flat buttons are meant to represent the secondary actions in dialogs. 

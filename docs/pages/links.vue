@@ -8,6 +8,32 @@
     </p>
     
     
+    <h3>Events</h3>
+
+    <a-table>
+        <thead>
+            <tr><td>This component has no events</td></tr>
+        </thead>
+        
+    </a-table>
+
+
+    <h3>Properties</h3>
+
+
+    <a-table>
+        <thead>
+            <tr><td>Property</td><td>Description</td><td>Type of data</td></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>href</td><td>The destination of the link.</td><td>String</td>
+            </tr>                        
+        </tbody>
+    </a-table>
+
+    
+    
 
     <h2>Link</h2>
 
@@ -19,7 +45,7 @@
                 
         <p>
             Links can lead to sections within the website (i.e. the <a-link :href="'#main-header'">main header</a-link>),
-            or they can lead to an external website (i.e. <a-link href="'www.github.com'">Github.com</a-link> ).
+            or they can lead to an external website (i.e. <a-link :href="'http://www.github.com'">Github.com</a-link> ).
         </p>
         <p>
             Mind the '#' and the 'http://' for each kind of link.
@@ -34,7 +60,7 @@
 
         <p>
             Links can lead to sections within the website (i.e. the <a-link :href="'#main-header'">main header</a-link>),
-            or they can lead to an external website (i.e. <a-link href="'www.github.com'">Github.com</a-link> ).
+            or they can lead to an external website (i.e. <a-link :href="'http://www.github.com'">Github.com</a-link> ).
         </p>
         <p>
             Mind the '#' and the 'http://' for each kind of link.

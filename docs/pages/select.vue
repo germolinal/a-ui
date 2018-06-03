@@ -8,6 +8,31 @@
     </p>
     
     
+    <h3>Events</h3>
+
+    <a-table>
+        <thead>
+            <tr><td>This component has no events</td></tr>
+        </thead>        
+    </a-table>
+
+
+    <h3>Properties</h3>
+
+    <a-table>
+        <thead>
+            <tr><td>Property</td><td>Description</td><td>Type of data</td></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>options</td><td>An array with the available options</td><td>Array of String</td>
+            </tr>
+            <tr>
+                <td>placeholder</td><td>Text to show when no option is selected</td><td>String</td>
+            </tr>
+        </tbody>
+    </a-table>
+
 
     <h2>Select</h2>
 

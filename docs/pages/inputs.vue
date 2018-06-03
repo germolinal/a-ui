@@ -6,26 +6,55 @@
     <p>
         Inputs have a pretty straightforward use. Allowed properties are:        
     </p>
-    <ul>
-        <li>
-            label: This works as a placeholder as well
-        </li>
-        <li>
-            type: Defaults to text
-        </li>
-        <li>
-            size: Defines the width of the input
-        </li>
-        <li>
-            min: Define the minimum value (or number of characters, in case of text)
-        </li>
-        <li>
-            max: Define the maximum value (or number of characters, in case of text)
-        </li>
-        <li>
-            required: Defines if a value is required or not
-        </li>
-    </ul>
+
+    
+
+    <h3>Events</h3>
+
+    <a-table>
+        <thead>
+            <tr><td>Events</td><td>Description</td></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>close</td><td>Emitted when the dialog is closed</td>
+            </tr>
+        </tbody>
+    </a-table>
+
+
+    <h3>Properties</h3>
+
+
+    <a-table>
+        <thead>
+            <tr><td>Property</td><td>Description</td><td>Type of data</td></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>label</td><td>Sets the placeholder and label</td><td>String</td>
+            </tr>            
+            <tr>
+                <td>type</td><td>Can be 'number' or 'string'</td><td>String</td>
+            </tr>            
+            <tr>
+                <td>size</td><td>The width of the input</td><td>Number</td>
+            </tr>            
+            <tr>
+                <td>min</td><td>Minimum value or number of characters (depending on the type)</td><td>Number</td>
+            </tr>            
+            <tr>
+                <td>max</td><td>Maximum value or number of characters (depending on the type)</td><td>Number</td>
+            </tr>            
+            <tr>
+                <td>required</td><td>A boolean indicating if is required</td><td>Boolean</td>
+            </tr>
+            <tr>
+                <td>disabled</td><td>A boolean indicating if disabled</td><td>Boolean</td>
+            </tr>
+        </tbody>
+    </a-table>
+
     
 
     <h2>Input</h2>
@@ -39,6 +68,7 @@
         <a-input :label="'Between 3 and 6 chars'" :min="3" :max="6" :required="true"></a-input>
         <a-input :label="'Any size of text'" ></a-input>
         <a-input :label="'Value between -10 and 10'" :size="17" :type="'number'" :min="-10" :max="10" :step="2"></a-input>
+        <a-input :label="'Disabled'" :value="'Cannot use this one'" :size="17" :disabled="true"></a-input>
 
 
     </textarea>
@@ -50,6 +80,7 @@
         <a-input :label="'Between 3 and 6 chars'" :min="3" :max="6" :required="true"></a-input>
         <a-input :label="'Any size of text'" ></a-input>
         <a-input :label="'Value between -10 and 10'" :size="17" :type="'number'" :min="-10" :max="10" :step="2"></a-input>
+        <a-input :label="'Disabled'" :value="'Cannot use this one'" :size="17" :disabled="true"></a-input>
     </div>
 
 

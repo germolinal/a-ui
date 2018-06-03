@@ -38,9 +38,11 @@ div.a-input{
         -moz-transition:0.2s ease all; 
         -webkit-transition:0.2s ease all;
     }
+
+    
     
     /* active state */
-    input:focus ~ label, &.non-pristine input ~ label {
+    input:focus ~ label, &.non-pristine input ~ label, input:disabled ~ label {
         bottom:100%;
         font-size:70%;
         color:$primary;

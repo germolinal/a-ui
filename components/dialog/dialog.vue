@@ -13,8 +13,15 @@
         </div>
 
         <div class="a-dialog-footer">
-          <a-raised-button :variant='"primary"' v-for='(func, name, index) in actions' :key='index' v-on:click.native='func()'>{{name}}</a-raised-button>
-          <a-flat-button :variant="'primary'" v-on:click.native="show()">Close</a-flat-button>            
+          <a-raised-button 
+            :variant='"primary"' 
+            v-for='(action, name, index) in actions' 
+            :key='index' 
+            v-on:click.native="callAction(action)">
+              {{name}}
+          </a-raised-button>
+
+          <a-flat-button :variant="'primary'" v-on:click.native="show();$emit('close')">Close</a-flat-button>            
         </div>
       </div>
   </div>
@@ -22,9 +29,18 @@
 <script>
 export default {
   props:['title','actions'],
-  methods: {    
+  methods: {   
+    callAction: function(action){
+      action();      
+      this.open = false;
+      this.$emit('close')
+    
+    },
     show: function(){
       this.open = !this.open;
+      if(!this.open){
+        this.$emit('close');
+      }
     }
   },
   data(){

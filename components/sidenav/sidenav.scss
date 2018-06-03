@@ -43,10 +43,7 @@ div.a-sidenav{
             color: $background;
             background-color: $primary;
     
-            &:hover {                
-                width: 105%;    
-                border-radius: 0 2px 2px 0;            
-            }
+            
     
             &.a-selected{
                 background-color: $secondary;            

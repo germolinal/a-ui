@@ -49,9 +49,18 @@ $font-family: Arial, Helvetica, sans-serif !default;
 
 // MATERIAL DESIGN ICONS
 
-//@import "~/material-design-icons/iconfont/material-icons";
-///Users/german/Documents/clean-ui/node_modules/material-design-icons/iconfont/material-icons.css
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+code{
+    font-size: 100%;
+    font-family: 'Source Code Pro', monospace;
+    background-color: rgba($color,0.2);
+    padding: 1em;
+    margin: 0.5em;
+}
 
 *{    
     font-family: $font-family;

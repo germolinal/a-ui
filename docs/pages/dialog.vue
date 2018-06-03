@@ -6,9 +6,40 @@
 
     There is only one Dialog available in Clean-UI, which is a modal dialog.       
     </p>
-    
+
+    <h3>Events</h3>
+
+    <a-table>
+        <thead>
+            <tr><td>Events</td><td>Description</td></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>close</td><td>Emitted when the dialog is closed</td>
+            </tr>
+        </tbody>
+    </a-table>
+
+
+    <h3>Properties</h3>
+
+    <a-table>
+        <thead>
+            <tr><td>Property</td><td>Description</td><td>Type of data</td></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>title</td><td>The title on the dialog</td><td>String</td>
+            </tr>
+            <tr>
+                <td>actions</td><td>An object with functions</td><td>Object</td>
+            </tr>
+        </tbody>
+    </a-table>
+
 
     <h2>Modal Dialog</h2>
+
 
     <h3>Example 1</h3>    
 
@@ -80,8 +111,12 @@
     <h3>Example 3</h3>    
 
     <p>
-        You can also include actions to the dialog. In order to do that, an object containing functions 
-        should passed to the ":actions" property. One Raised-Primary button will be added for each function. 
+        You can also include actions to the dialog. In order to do that, an object containing functions (i.e. {'some action' : function(){ console.log('action!')}})
+        should passed to the "actions" property. One Raised-Primary button will be added for each function.
+    </p>
+    <p>
+        After calling the function passed to the dialog (i.e. click the corresponding button), the dialog will be closed,
+        and the 'close' event will be emitted.
     </p>
     <p>The following html</p>
 
@@ -117,6 +152,7 @@
         <a-button :variant="'primary'" @click.native="$refs.dialogThree.show()">Open dialog</a-button>        
     </div>
     
+
 
 
   </div>

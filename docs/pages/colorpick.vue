@@ -8,7 +8,24 @@
     </p>
     
 
-    <h2>RGB color pick</h2>
+    <h3>Events</h3>
+
+    <a-table>
+        <thead>
+            <tr><td>This component has no events</td></tr>
+        </thead>        
+    </a-table>
+
+
+    <h3>Properties</h3>
+
+    <a-table>
+        <thead>
+            <tr><td>This component has no properties</td></tr>
+        </thead>        
+    </a-table>
+
+    <h2>HSV color pick</h2>
 
     <h3>Examples</h3>    
 
