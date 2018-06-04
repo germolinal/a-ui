@@ -17,7 +17,10 @@
         </thead>
         <tbody>
             <tr>
-                <td>close</td><td>Emitted when the dialog is closed</td>
+                <td>enter</td><td>Emitted when keyup === Enter</td>
+            </tr>
+            <tr>
+                <td>input</td><td>Emitted when any input is given</td>
             </tr>
         </tbody>
     </a-table>
@@ -81,6 +84,7 @@
         <a-input :label="'Any size of text'" ></a-input>
         <a-input :label="'Value between -10 and 10'" :size="17" :type="'number'" :min="-10" :max="10" :step="2"></a-input>
         <a-input :label="'Disabled'" :value="'Cannot use this one'" :size="17" :disabled="true"></a-input>
+        
     </div>
 
 
@@ -91,7 +95,6 @@
     export default {
         data: function(){
             return{
-                
             }
         }
     }

@@ -3,6 +3,10 @@ div.a-input{
     margin-bottom: 15px;
     border-radius:0;    
     
+    i{
+        display: inline;
+    }
+
     *{
         background-color: transparent;
     }
@@ -37,16 +41,21 @@ div.a-input{
         transition:0.2s ease all; 
         -moz-transition:0.2s ease all; 
         -webkit-transition:0.2s ease all;
+            
     }
 
     
     
     /* active state */
-    input:focus ~ label, &.non-pristine input ~ label, input:disabled ~ label {
+    input:focus ~ label, &.non-pristine input ~ label{
         bottom:100%;
         font-size:70%;
         color:$primary;
-        height:auto;
+        height:auto;        
+    }
+    input:disabled {
+        background: rgba($color,0.1);        
+        border: none;
     }
 
     &.invalid{    

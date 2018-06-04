@@ -1,15 +1,19 @@
 <template>
-  <div ref="main" class="a-input" >      
-    <input  v-on:keyup.enter="$emit('enter')"             
-            ref="in" 
-            :disabled="disabled" 
-            :min="min" 
-            :max="max" 
-            :size="size || 14" 
-            :value="value" 
-            @input="update()">
+
+  <div ref="main" class="a-input">                     
+        <input             
+                v-on:keyup.enter="$emit('enter')"
+                ref="in" 
+                :disabled="disabled" 
+                :min="min" 
+                :max="max" 
+                :size="size || 14" 
+                :value="value" 
+                @input="update()">
+      
     <label>{{label | FixString}}</label>    
   </div>
+
 </template>
 
 <script>
@@ -20,18 +24,31 @@ export default {
     filters : {
         FixString : FixString
     },
+    computed: {
+        hasValue: function(){
+            if(this.$refs.in){
+                var value = this.$refs.in.value;
+                console.log(value);
+                return (value !== undefined && value !== "");
+            }else{
+                return false;
+            }
+        }
+    },
     methods: {
         update() {
             var input = this.$refs.in;
             var main = this.$refs.main;
-            var value = input.value;            
+            var value = input.value;     
+
             
-            // Check pristinness            
+            // Check pristinness    
+                    
             if(!value ){
                 main.classList.remove('non-pristine');                
             }else {
                 main.classList.add('non-pristine');
-            }
+            }            
         
             // Check validity          
             if(this.required){
@@ -70,9 +87,8 @@ export default {
                 
         }
     },
-    data(){
-        return {            
-        }
+    mounted(){
+        this.update();
     }
 };
 </script>
