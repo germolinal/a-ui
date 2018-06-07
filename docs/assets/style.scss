@@ -4,6 +4,9 @@ $font-family: 'Montserrat', 'sans-serif';
 div.example-content{
     border: 1px solid gray;
     padding: 0.2in;
+    i{
+        vertical-align: middle
+    }
 }
 
 @import "../../clean-ui";

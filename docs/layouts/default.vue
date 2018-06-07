@@ -50,6 +50,10 @@
         <a-button :variant="'primary'">Directives</a-button>
       </nuxt-link>
 
+      <nuxt-link to="/filters">
+        <a-button :variant="'primary'">Filters</a-button>
+      </nuxt-link>
+
       <nuxt-link to="/theming">
         <a-button :variant="'primary'">Theming</a-button>
       </nuxt-link>

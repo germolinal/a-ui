@@ -27,7 +27,8 @@ export default {
     },
     methods: {
         chooseOption(optionName){            
-            this.$emit('input', optionName);
+            this.$emit('input', optionName); 
+            this.$emit('change');
             this.active = false;
         }
     },

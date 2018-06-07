@@ -6,7 +6,7 @@
         </div>
 
         <div v-if="editing" class='editor'>
-            <input ref='input' :value="value" type="text" @keyup.enter="update()">                      
+            <input ref='input' :value="value" @keyup.enter="update()">                      
             <a-raised-button :variant="'primary'" v-on:click.native="update()">Done</a-raised-button>            
             <a-flat-button :variant="'primary'" v-on:click.native='editing = false'>Cancel</a-flat-button>            
         </div>         
@@ -16,13 +16,13 @@
 
 <script>
 export default {
-    props: ['value'],
+    props: ['value'],    
     methods: {
         update: function(){
             this.$emit('input',this.$refs.input.value);   
             this.editing = false;         
             this.$emit('submit');   
-        }
+        }        
     },
     data(){
         return {

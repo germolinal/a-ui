@@ -55,6 +55,9 @@
             <tr>
                 <td>disabled</td><td>A boolean indicating if disabled</td><td>Boolean</td>
             </tr>
+            <tr>
+                <td>error</td><td>An error message to show when the input is invalid</td><td>String</td>
+            </tr>
         </tbody>
     </a-table>
 
@@ -66,27 +69,62 @@
 
     <p>The following html</p>
 
-    <textarea v-verbatim>
+    <textarea v-verbatim style="height: 350px">
         
-        <a-input :label="'Between 3 and 6 chars'" :min="3" :max="6" :required="true"></a-input>
-        <a-input :label="'Any size of text'" ></a-input>
-        <a-input :label="'Value between -10 and 10'" :size="17" :type="'number'" :min="-10" :max="10" :step="2"></a-input>
-        <a-input :label="'Disabled'" :value="'Cannot use this one'" :size="17" :disabled="true"></a-input>
+        <a-input    :size="20" 
+                    :error="'this is the error message'" 
+                    :label="'Between 3 and 6 chars'" 
+                    :min="3" 
+                    :max="6" 
+                    :required="true"></a-input>
+        
+        <a-input    :label="'Any size of text'" 
+                    :error="'Required'"
+                    :required="true"></a-input>
 
+        <a-input    :error="'Must be etween -10 and 10'" 
+                    :label="'Value between -10 and 10'" 
+                    :size="17" 
+                    :type="'number'" 
+                    :min="-10" 
+                    :max="10" 
+                    :step="2"></a-input>
 
+        <a-input    :label="'Disabled'" 
+                    :value="'Cannot use this one'" 
+                    :size="17" 
+                    :disabled="true"></a-input>
     </textarea>
 
     
     <p>Leads to </p>   
     
     <div class="example-content">
-        <a-input :label="'Between 3 and 6 chars'" :min="3" :max="6" :required="true"></a-input>
-        <a-input :label="'Any size of text'" ></a-input>
-        <a-input :label="'Value between -10 and 10'" :size="17" :type="'number'" :min="-10" :max="10" :step="2"></a-input>
-        <a-input :label="'Disabled'" :value="'Cannot use this one'" :size="17" :disabled="true"></a-input>
+        <a-input    :size="20" 
+                    :error="'this is the error message'" 
+                    :label="'Between 3 and 6 chars'" 
+                    :min="3" 
+                    :max="6" 
+                    :required="true"></a-input>
+        
+        <a-input    :label="'Any size of text'" 
+                    :error="'Required'"
+                    :required="true"></a-input>
+
+        <a-input    :error="'Must be etween -10 and 10'" 
+                    :label="'Value between -10 and 10'" 
+                    :size="17" 
+                    :type="'number'" 
+                    :min="-10" 
+                    :max="10" 
+                    :step="2"></a-input>
+
+        <a-input    :label="'Disabled'" 
+                    :value="'Cannot use this one'" 
+                    :size="17" 
+                    :disabled="true"></a-input>
         
     </div>
-
 
   </div>
 </template>

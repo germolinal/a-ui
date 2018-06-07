@@ -8,6 +8,11 @@
 
 table.a-table{
     
+    i.material-icons{
+        color: $primary;
+        vertical-align: middle;
+    }
+
     td.editable-cell{
         *{
             vertical-align: middle;
@@ -41,6 +46,10 @@ table.a-table{
                 border: 1px solid darken(white,17);
                 padding: 0.5em;
                 border-radius: 0;
+
+                &:invalid{
+                    color: red;
+                }
             }
             *{                
                 display:block;                 

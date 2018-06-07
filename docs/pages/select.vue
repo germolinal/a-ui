@@ -12,9 +12,15 @@
 
     <a-table>
         <thead>
-            <tr><td>This component has no events</td></tr>
-        </thead>        
+            <tr><td>Events</td><td>Description</td></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>change</td><td>Emitted when the option is changed</td>
+            </tr>            
+        </tbody>
     </a-table>
+
 
 
     <h3>Properties</h3>
@@ -41,14 +47,16 @@
     <p>Options are passed in an array to the 'options' property</p>
 
     <textarea v-verbatim >        
-        <a-select v-model="selectedOption1" :options="options" ></a-select>
+        <a-select @change="$refs.selectChanged.show()" v-model="selectedOption1" :options="options" ></a-select>
+        <a-toast ref='selectChanged'>Select changed to '\{\{selectedOption1\}\}'</a-toast>
     </textarea>
 
     
     <p>Leads to </p>   
     
     <div class="example-content" >
-        <a-select v-model="selectedOption1" :options="options" ></a-select>
+        <a-select @change="$refs.selectChanged.show()" v-model="selectedOption1" :options="options" ></a-select>
+        <a-toast ref='selectChanged'>Select changed to '{{selectedOption1}}'</a-toast>
     </div>
 
 
@@ -67,6 +75,9 @@
         <a-select v-model="selectedOption2" :options="options" :placeholder="'My custom placeholder...'"></a-select>
     </div>
 
+
+    
+
   </div>
 </template>
 
@@ -78,7 +89,7 @@ export default {
             selectedOption2: null,
             options: [
                 "Option 1",
-                "Option 2  pppppppppppp",
+                "Option 2",
                 "Option 3",
                 "Option 4",
             ]

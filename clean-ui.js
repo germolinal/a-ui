@@ -9,6 +9,12 @@ import Container from "./directives/container";
 import Verbatim from "./directives/verbatim";
 import WithSidenav from "./directives/with-sidenav";
 
+/* FILTERS */
+/***********/
+import FixString from "./filters/fix-string";
+import LimitString from "./filters/limit-string";
+import TrimString from "./filters/trim-string";
+
 /* COMPONENTS */
 /**************/
 
@@ -45,6 +51,11 @@ export default {
       Vue.directive('verbatim',Verbatim);
       Vue.directive('with-sidenav',WithSidenav);
 
+      /* FILTERS */
+      /***********/
+      Vue.filter('fixString',FixString);
+      Vue.filter('limitString',LimitString);
+      Vue.filter('trim',TrimString);
       
       /* COMPONENTS */
       /**************/

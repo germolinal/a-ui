@@ -11,39 +11,26 @@
                 :value="value" 
                 @input="update()">
       
-    <label>{{label | FixString}}</label>    
+    <label>{{label | fixString}}</label>    
+    <small v-if="error">{{error | fixString}}</small>
+    
   </div>
 
 </template>
 
 <script>
-import FixString from "../../filters/fix-string";
+//import FixString from "../../filters/fix-string";
 
 export default {
-    props: ['value','label','type','step','size','min','max','required','disabled'],
-    filters : {
-        FixString : FixString
-    },
-    computed: {
-        hasValue: function(){
-            if(this.$refs.in){
-                var value = this.$refs.in.value;
-                console.log(value);
-                return (value !== undefined && value !== "");
-            }else{
-                return false;
-            }
-        }
-    },
+    props: ['value','label','type','step','size','min','max','required','disabled','error'],
+    
     methods: {
         update() {
             var input = this.$refs.in;
             var main = this.$refs.main;
             var value = input.value;     
 
-            
-            // Check pristinness    
-                    
+            // Check pristinness        
             if(!value ){
                 main.classList.remove('non-pristine');                
             }else {
