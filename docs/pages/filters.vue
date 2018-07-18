@@ -45,6 +45,29 @@
             {{'    auto     ' | trim }}
         </div>
 
+        <h2>Round</h2>
+        <p>
+            This filter rounds a number to a certain number of decimals.
+        </p>
+        
+        <div class="example-content">
+            10.123123 | round(2) 
+            <i class="material-icons">arrow_forward</i> 
+            {{10.123123 | round(2) }}
+        </div>
+
+        <div class="example-content">
+            10.123123 | round(4) 
+            <i class="material-icons">arrow_forward</i> 
+            {{10.123123 | round(4) }}
+        </div>
+
+        <div class="example-content">
+            10.123123 | round(0) 
+            <i class="material-icons">arrow_forward</i> 
+            {{10.123123 | round(0) }}
+        </div>
+
     </div>
 </template>
 

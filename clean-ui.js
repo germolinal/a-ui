@@ -14,6 +14,7 @@ import WithSidenav from "./directives/with-sidenav";
 import FixString from "./filters/fix-string";
 import LimitString from "./filters/limit-string";
 import TrimString from "./filters/trim-string";
+import Round from "./filters/round";
 
 /* COMPONENTS */
 /**************/
@@ -56,6 +57,7 @@ export default {
       Vue.filter('fixString',FixString);
       Vue.filter('limitString',LimitString);
       Vue.filter('trim',TrimString);
+      Vue.filter('round',Round);
       
       /* COMPONENTS */
       /**************/

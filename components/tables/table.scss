@@ -79,7 +79,12 @@ table.a-table{
 
     border-collapse: collapse;
     font-size: 90%;
-    margin: 15px auto;    
+    margin: 15px auto;   
+    
+    td:first-child{
+        text-align: left;
+    } 
+
     td{
         border-bottom: 1px solid rgba($color,0.12);
         padding: 0.7em 0.9em;
