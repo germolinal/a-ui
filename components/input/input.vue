@@ -8,8 +8,7 @@
                 :min="min" 
                 :max="max" 
                 :size="size || 14" 
-                :value="value" 
-                :type = "type"
+                :value="value"                 
                 @input="update()">
       
     <label>{{label | fixString}}</label>    
