@@ -224,12 +224,14 @@
               <tr>
                   <td>Row 1</td>
 
-                  <a-editable-cell v-model="editableValue"></a-editable-cell>
+                  <a-editable-cell :type="'number'" v-model="editableValue"></a-editable-cell>
               </tr>
           </tbody>
       </a-double-entry-table>
 
       {{editableValue}}
+      <br>    
+      {{typeof editableValue}}
     </div>
 
 

@@ -9,6 +9,7 @@
                 :max="max" 
                 :size="size || 14" 
                 :value="value" 
+                :type = "type"
                 @input="update()">
       
     <label>{{label | fixString}}</label>    
