@@ -4,18 +4,28 @@
 div.a-sidenav{
     
 
+    -moz-transition: transform 0.35s ease;
+        transition: transform 0.35s ease;         
+        transform: translateX(0%);    
+
     z-index:9;
     width: auto;
     position: fixed;
     height:100vh;
     left:0;
     top:0;
-    background-color: $primary;    
+    background-color: $primary;   
+    
+    &.hidden{
+        transform: translateX(-100%);
+    }
+    
     div.wrap{
         left:0;
         position: relative;
         top: 50%;
-        transform: translate(0, -50%);
+        transform: translate(0, -50%);        
+
         div.a-sidenav-item {
             position: relative;
             box-sizing: border-box;

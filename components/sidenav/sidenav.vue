@@ -1,5 +1,5 @@
 <template>
-  <div class="a-sidenav"> 
+  <div v-bind:class="{hidden: hidden}" class="a-sidenav"> 
     <div class='wrap' v-select>
         <slot></slot>
     </div>         
@@ -8,10 +8,23 @@
 
 <script>
 export default {  
+    
+    methods : {
+        show: function(){
+            this.hidden = false;
+        },
+        hide: function() {
+            this.hidden = true;
+        },
+        toggle: function(){
+            this.hidden=!this.hidden;
+        }
+    },
     directives:{
         
         select : {
-            inserted: function(el){
+            inserted: function(el){                
+
                 var children = el.children;
                 
                 // Handle the OnClick event
@@ -32,6 +45,7 @@ export default {
     },
     data(){
         return {
+            hidden: false
 
         }
     }
